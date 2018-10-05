@@ -42,7 +42,9 @@
     "react-dom": "^15.6.0",
     "rtc": "^3.4.0",
     "the-graph": "^0.12.0",
-    "uuid": "^3.0.1"
+    "uuid": "^3.0.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -77,12 +79,13 @@
     "sinon": "^5.0.0",
     "syn": "^0.13.0",
     "webpack": "^4.0.0",
+    "webpack-livereload-plugin": "^2.1.1",
     "yaml-loader": "^0.5.0"
   },
   "scripts": {
     "pretest": "coffeelint -f .coffeelint.json -r components",
     "test": "karma start",
-    "start": "http-server . -p 9999 -s -c-1",
+    "start": "webpack-dev-server --host 127.0.0.1 --port 4000 --open",
     "build": "grunt build",
     "watch": "grunt watch"
   },

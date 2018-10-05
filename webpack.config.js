@@ -1,4 +1,5 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
   entry: './app/main.js',
@@ -79,6 +80,7 @@ module.exports = {
     extensions: [".coffee", ".js"],
   },
   plugins: [
+    new LiveReloadPlugin(),
     new CopyWebpackPlugin([
       {
         from: 'node_modules/@polymer/polymer/*.html',
