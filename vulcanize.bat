@@ -1,0 +1,1 @@
+./node_modules/.bin/polymer-bundler index.dist.html > index.html

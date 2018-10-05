@@ -10,7 +10,7 @@ module.exports = ->
     # Vulcanization compiles the Polymer elements into a HTML file
     exec:
       vulcanize:
-        command: 'node_modules/.bin/polymer-bundler index.dist.html > index.html'
+        command: 'vulcanize.bat'
         cwd: __dirname
 
     # Directory cleaning
